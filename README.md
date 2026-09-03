@@ -47,19 +47,28 @@ ones — laying the groundwork for future predictive modeling.
    acceptance
 6. **Categorical Analysis** — Analyzed loan acceptance rates across 
    education levels, family size, and banking product ownership
+   
+## Data Cleaning Summary
+
+- Removed records with implausible age values (over 100 years)
+- Removed records with negative Experience and Family values
+- Removed duplicate records and reset index
+- Total data removed was minimal — dataset integrity preserved
 
 ## Key Findings
 
-- Only ~9.6% of customers accepted a personal loan — significant class 
-  imbalance for future modeling
-- **Income** and **CCAvg** are the strongest numerical predictors of 
-  loan acceptance
-- Customers with **higher education levels** showed notably higher 
-  acceptance rates
-- Customers holding a **CD Account** were significantly more likely to 
-  accept a personal loan
-- **Experience** was highly correlated with **Age** — potential 
-  multicollinearity to address in modeling
+- **Class imbalance detected** — the majority of customers did not accept a personal 
+  loan, creating a significant imbalance in the target variable relevant for future modeling
+- **Income and CCAvg** are the strongest numerical predictors of loan acceptance — 
+  customers who accepted the loan consistently showed higher values in both variables
+- **Family size** shows a positive association with loan acceptance — customers with 
+  larger families tended to accept the loan more often
+- **Education level** shows a clear positive association — higher education correlates 
+  with higher loan acceptance rates
+- **CD Account** shows the strongest association among all categorical variables — 
+  customers holding a CD Account were notably more likely to accept a personal loan
+- **Age and Experience** are highly correlated (Pearson correlation close to 1) — 
+  potential multicollinearity to address in future predictive modeling
 
 ## What I Learned
 
